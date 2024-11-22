@@ -1,0 +1,22 @@
+{
+  "name": "monk",
+  "version": "1.0.0",
+  "description": "Download the zip folder of the application. Open the project in vscode, webstorm or some JS supporting IDE. Goto project root directory and run npm i. Run npm start to run server. Now app is running on localhost. App is ready to be tested. Test the app from the postman collection in the github link.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

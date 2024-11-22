@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "f3e2a020-4be7-4fe1-9744-fa10f321ac55",
+		"name": "monk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36685873",
+		"_collection_link": "https://martian-shuttle-724479.postman.co/workspace/Autodesk_PAT_Workspace~c99bf3d1-cb7a-46b5-8201-35d07c929adf/collection/36685873-f3e2a020-4be7-4fe1-9744-fa10f321ac55?action=share&source=collection_link&creator=36685873"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/applicable-coupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart\": {\r\n        \"items\": [\r\n            {\r\n                \"productId\": 1,\r\n                \"quantity\": 6,\r\n                \"price\": 50\r\n            }, // Product X\r\n            {\r\n                \"productId\": 2,\r\n                \"quantity\": 3,\r\n                \"price\": 30\r\n            }, // Product Y\r\n            {\r\n                \"productId\": 3,\r\n                \"quantity\": 2,\r\n                \"price\": 25\r\n            } // Product Z\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/applicable-coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"applicable-coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/apply-coupon/52",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart\": {\r\n        \"items\": [\r\n            {\r\n                \"productId\": 1,\r\n                \"quantity\": 6,\r\n                \"price\": 50\r\n            }, // Product X\r\n            {\r\n                \"productId\": 2,\r\n                \"quantity\": 3,\r\n                \"price\": 30\r\n            }, // Product Y\r\n            {\r\n                \"productId\": 3,\r\n                \"quantity\": 2,\r\n                \"price\": 25\r\n            } // Product Z\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/apply-coupon/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apply-coupon",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/create-coupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"cart-wise\",\r\n    \"discount_details\": {\r\n        \"type\": \"percentage\",\r\n        \"value\": 35\r\n    },\r\n    \"conditioning\": {\r\n        \"minCartValue\": 1000\r\n    },\r\n    \"isActive\": 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/find-all-coupons",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/find-all-coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"find-all-coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coupons/61",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coupons/61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons",
+						"61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/delete/71",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete/71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						"71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/update-coupon/56",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"cart-wise\",\r\n    \"discount_details\": {\r\n        \"type\": \"percentage\",\r\n        \"value\": 25\r\n    },\r\n    \"conditioning\": {\r\n        \"minCartValue\": 1000\r\n    },\r\n    \"isActive\": 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-coupon/56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-coupon",
+						"56"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
